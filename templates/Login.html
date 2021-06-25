@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/Login.css">
+  </head>
+  <body>
+
+<form class="box" id="form" name="mylogin"  method="post">
+  <a href="../index.html"><img src="../img/f_logo.png" alt=""></a>
+  <hr>
+  <input type="text" id="mail" name="" placeholder="email"></input>
+  <input type="password" id="psw" name="" placeholder="Mot De Passe">
+  <input type="button" onclick="validationcheck();" name="" value="Login"></input>
+  <hr>
+  <a href="signUp.html">Pas De Compte ?</a>
+</form>
+<script src="../js/DATA.js"></script>
+<script src="../js/jquery.js"></script>
+  <script>
+
+    var db;
+
+try {
+  db = openDatabase('ReservationDB', '1.0', 'ReservationDB',65535);
+} catch (e) {
+  console.log(e);
+}
+function validationcheck() {
+  
+  if (document.mylogin.mail.value == "") {
+    alert('entrez email');
+    document.mylogin.mail.value = "";
+    document.mylogin.psw.value = "";
+    document.mylogin.mail.focus();
+  } else if (document.mylogin.psw.value == "") {
+    alert('entrez mot de passe');
+    document.mylogin.mail.value = "";
+    document.mylogin.psw.value = "";
+    document.mylogin.mail.focus();
+  }
+  if (document.mylogin.mail.value == "admin" && document.mylogin.psw.value == "admin") {
+              window.location="Admin.html";
+            }
+  
+  else {
+    var mail = document.mylogin.mail.value;
+    var password = document.mylogin.psw.value;
+    try {
+
+      db.transaction(function(tx) {
+        tx.executeSql(`SELECT * FROM User WHERE email='${mail}'`, [], function(tx, result) {
+          if (result.rows.length == 1) {
+            var user = result.rows.item(0);
+
+            if (mail == user.email && password == user.pw) {
+              window.location="home.html";
+            } else {
+              alert("echec d'identification");
+              document.mylogin.mail.value = "";
+              document.mylogin.psw.value = "";
+            }
+          }
+        }, function(tx, error) {
+          alert("Vous n'avez pas de compte :(", error);
+        });
+      });
+
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  localStorage.setItem("emaiil",document.getElementById('mail').value);
+}
+
+  </script>
+
+  </body>
+</html>

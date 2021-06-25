@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Sign Up</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="../css/pogo-slider.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../css/Signup.css" />
+    <!-- Reservation css -->
+    <link rel="stylesheet" href="../css/formlogin.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body  class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="5" onload=" load();">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="../images/loader.gif" style="width: 75px;" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <img src="../img/logo.png" style="width: 160px;" alt="image">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <form class='form'  id="reserv" method="POST">
+        <p class='field required'>
+          <label class='label required' for='name'>Nom Complet</label>
+          <input class='text-input' id='name' placeholder="votre Nom" name='name' required type='text'>
+        </p>
+        <p class='field half required'>
+          <label class='label' for='email'>Email</label>
+          <input class='text-input' id='email' name='mail' required type='mail' placeholder="example: gmail@gmail.com">
+        </p>
+        <p class='field half required'>
+          <label class='label' for='password'>mot de passe</label>
+          <input class='text-input' id='pw' name='password' required type='*******' placeholder="Your password">
+        </p>
+          <br>
+          <p class='field half required'>
+          <label class='label' for='phone'>telephone</label>
+          <input class='text-input' id='phone' name='phone' required type='telephone' placeholder="example:(212)0606060606">
+        </p>
+        <p class='field half required'>
+          <label class='label' for='CIN'>CIN</label>
+          <input class='text-input' id='CIN' name='CIN' required type='text' placeholder="F000000">
+        </p>
+        <div class='field required'>
+          <label class='label'>Sexe</label>
+          <ul class='options'>
+            <li class='option'>
+              <input class='option-input' id='female' name='sexe' type='radio' value='feminin'>
+              <label class='option-label' for='female'>Feminin</label>
+            </li>
+            <li class='option'>
+              <input class='option-input' id='male' name='sexe' type='radio' value='masculin'>
+              <label class='option-label' for='male'>Masculin</label>
+            </li>
+        </div>
+        <p class='field required'>
+          <label class='label' for='adresse'>Adresse</label>
+          <textarea class='textarea' cols='50' id='adresse' name='adresse' required type='text' rows='4'></textarea>
+        </p>
+        <p class='field half'>
+          <label class='label' for='position'>Poste</label>
+          <select class='select' id='position'>
+            <option selected value='none'>none</option>
+            <option value='Student'>Etudiant</option>
+            <option value='Employee'>Employé</option>
+          </select>
+        </p>
+        <p class='field half'>
+          <br>
+          <a class="button" id="Cancel"  style="width: 37%;" href="Login.html">Annuler</a>
+          <br>
+         <button class="button" id="save" onclick="Sign();"> enregistrer</button>
+          <br>
+        <!--*********************************************************************************************************************************-->
+      </form>
+    <!-- Start Footer -->
+    <footer class="footer-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 margin-bottom_30">
+				   <img src="../img/f_logo.png" alt="#" />
+				</div>
+               <div class="col-xl-6 white_fonts">
+                    <div class="row">
+					<div class="col-md-12 white_fonts margin-bottom_30">
+					   <h3>Contact Us</h3>
+					</div>
+                        <div class="col-md-4">
+                            <div class="full icon">
+                                <img src="../images/social1.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>OUJDA
+                                    <br>MOROCCO</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="full icon">
+                                <img src="../images/social2.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>consultation@gmail.com
+                                    <br>consultation@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="full icon">
+                                <img src="../images/social3.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>+2126060606
+                                    <br>+2126060606</p>
+                            </div>
+                        </div>
+						<div class="col-md-12">
+						   <ul class="full social_icon margin-top_20">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+						</div>
+                    </div>
+                </div>
+				
+				 <div class="col-xl-6 white_fonts">
+				    <div class="row">
+					   <div class="col-md-6">
+					     <div class="footer_blog footer_menu">
+						    <h3>Menus</h3>
+						    <ul> 
+							  <li><a href="index.html">Home</a></li>
+							  <li><a href="#">About Us</a></li>
+							  <li><a href="Reservation.html">Reservation</a></li>
+							  <li><a href="#">Blog</a></li>
+							  <li><a href="#">Contact us</a></li>
+							</ul>
+						 </div>
+						 <div class="footer_blog recent_post_footer">
+						   <h3>Recent Post</h3>
+						   <p>date</p>
+						 </div>
+					   </div>
+					 
+					</div>
+				 </div>
+
+            </div>
+            
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp"></p>
+                    <ul class="bottom_menu">
+                        <li><a href="#">Term of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.pogo-slider.min.js"></script>
+    <script src="../js/slider-index.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/form-validator.min.js"></script>
+    <script src="../js/contact-form-script.js"></script>
+    <script src="../js/isotope.min.js"></script>
+    <script src="../js/images-loded.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/DATA.js"></script>
+    <script>
+
+      female = document.getElementById('female')
+male = document.getElementById('male')
+function radio()
+{
+  if(female.checked)
+  {
+    return female.value;
+  }
+  if(male.checked)
+  {
+    return male.value;
+  }
+}
+
+      try {
+  db = openDatabase('ReservationDB', '1.0', 'ReservationDB',65535);
+} catch (e) {
+  console.log(e);
+}
+      function load()
+      {
+        create();
+      }
+      function Sign() 
+{
+  if(document.getElementById("email").value== "" && document.getElementById("pw").value == "")
+  {
+    
+    alert("remplissez les donnees");
+  }
+  else{
+    db.transaction(function(transaction){
+        var cin = $("#CIN").val();
+             var nom = $("#name").val(); 
+             var tele =  $("#phone").val();
+             var  email=  $("#email").val();
+              var pw = $("#pw").val();
+              var position = $("#position").val();
+              var adresse = $("#adresse").val();
+              var sexe = radio();
+      var sql1="INSERT INTO User(cin,nom,tele,email,pw,position,adresse,sexe) VALUES(?,?,?,?,?,?,?,?)";
+      transaction.executeSql(sql1,[cin,nom,tele,email,pw,position,adresse,sexe],function(){
+          confirm("donnée Utilisateur sont bien Ajoutées");
+          window.location = 'Login.html';
+      },function(transaction){
+          alert("email ou cin sont deja pris par un utilisateur",);
+      })
+      })}
+}
+      </script>
+
+</body>
+</html>

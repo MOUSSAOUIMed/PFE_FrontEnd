@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Facture</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  </head>
+  <body onload="load();">
+    <header class="clearfix">
+      <div><a href="Reservation.html" style="margin-left: -250px;"><img src="../images/left-arrow.png"></a></div>
+      <div id="logo">
+        <span><img src="../img/eclairage-de-studio.png"></span>
+      </div>
+      <div id="company">
+        <h2 class="name">FanArtiste</h2>
+        <div>Stade Municipale, Oujda</div>
+        <div>(212)706186011</div>
+        <div><a href="mailto:company@example.com">company@example.com</a></div>
+      </div>
+      </div>
+    </header>
+    <form id="form">
+      <div id="details" class="clearfix">
+        <div id="client">
+          <div class="to" id="mail">FACTURE DE:
+            <br>
+            <div><a href="mailto:" id="to"></a></div>
+          </div>
+          <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"> </div>
+          <h2 class="name" id="name"></h2>
+          <div class="address" id="adresse"></div>
+          <div class="email" ><a href="mailto:" id="email"></a></div>
+        </div>
+        <div id="invoice">
+          <h1>FACTURE</h1>
+          <div class="date" id="date">DATE EVENEMENT:
+            
+          </div>
+          <div class="date" id="dateRes"></div>
+        </div>
+      </div>
+      <table id="table" cellspacing="0" cellpadding="0" onload="generatepdf();">
+        <thead>
+          <tr>
+            <th class="no">#</th>
+            <th class="unit">date</th>
+            <th class="qty">TYPE</th>
+            <th class="unit">PRIX UNITAIRE</th>
+            <th class="desc">TICKETS</th>
+            <th class="total">TOTAL</th>
+          </tr>
+        </thead>
+      </table>
+      <div id="thanks">Merci pour la reservation</div>
+      <div id="notices">
+        <div>ASTUCE:</div>
+        <div class="notice">N'hesitez pas de venir à l'heure pour mieux manifister à l'événement</div>
+      </div>
+    </form>
+    <div style="margin-left: 300px; margin-top: 50px;"><a href="#" onclick="generatepdf();"><img src="../img/download.png" alt=""/></a></div>
+    <div id="client">
+      <div class="to">
+      </div id="client">
+        ASTUCE:
+        <br>
+        Telecharger le code qr en cliquant sur l'image QR.
+    </div>
+  </body>
+  <style>
+    
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #0087C3;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  width: 21cm;  
+  height: 29.7cm; 
+  margin: 0 auto; 
+  color: #555555;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+}
+
+header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+#logo {
+  float: left;
+  margin-top: 8px;
+}
+
+#logo img {
+  height: 70px;
+}
+
+#company {
+  float: right;
+  text-align: right;
+}
+
+
+#details {
+  margin-bottom: 50px;
+}
+
+#client {
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;
+  float: left;
+}
+
+#client .to {
+  color: #777777;
+}
+
+h2.name {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#invoice {
+  float: right;
+  text-align: right;
+}
+
+#invoice h1 {
+  color: #0087C3;
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: normal;
+  margin: 0  0 10px 0;
+}
+
+#invoice .date {
+  font-size: 1.1em;
+  color: #777777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  padding: 20px;
+  background: #EEEEEE;
+  text-align: center;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+table th {
+  white-space: nowrap;        
+  font-weight: normal;
+}
+
+table td {
+  text-align: right;
+}
+
+table td h3{
+  color: #57B223;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0 0 0.2em 0;
+}
+
+table .no {
+  color: #FFFFFF;
+  font-size: 1.6em;
+  background: #57B223;
+}
+
+table .desc {
+  text-align: left;
+}
+
+table .unit {
+  background: #DDDDDD;
+}
+
+
+table .total {
+  background: #57B223;
+  color: #FFFFFF;
+}
+
+table td.unit,
+table td.qty,
+table td.total {
+  font-size: 1.2em;
+}
+
+table tbody tr:last-child td {
+  border: none;
+}
+
+table tfoot td {
+  padding: 10px 20px;
+  background: #FFFFFF;
+  border-bottom: none;
+  font-size: 1.2em;
+  white-space: nowrap; 
+  border-top: 1px solid #AAAAAA; 
+}
+
+table tfoot tr:first-child td {
+  border-top: none; 
+}
+
+table tfoot tr:last-child td {
+  color: #57B223;
+  font-size: 1.4em;
+  border-top: 1px solid #57B223; 
+
+}
+
+table tfoot tr td:first-child {
+  border: none;
+}
+
+#thanks{
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+#notices{
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;  
+}
+
+#notices .notice {
+  font-size: 1.2em;
+}
+
+footer {
+  color: #777777;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #AAAAAA;
+  padding: 8px 0;
+  text-align: center;
+}
+
+
+  </style>
+  <script src="../js/DATA.js"></script>
+  <script src="../js/jquery.js"></script>
+
+  <!-- jQuery library -->
+<script src="../js/jquery.min.js"></script>
+ <script src="../js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+<script src="../js/qrCode/jquery.min.js"></script>
+<script src="../js/qrCode/qrcode.js"></script>
+  <script>
+    var dd  = localStorage.getItem("cin");
+    console.log(dd);
+        function load()
+{
+    var db=openDatabase("ReservationDB","1.0","ReservationDB",65535);
+    		$("#table").children();
+	db.transaction(function(transaction){
+		var sql=`SELECT * FROM Reservation WHERE cin='${dd}'`;
+		transaction.executeSql(sql,undefined,function(transaction,result){
+if(result.rows.length){
+
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+    var id = row.id;
+	var dater=row.dateR;
+	var typer=row.priceR;
+	var pricer=row.typeR;
+	var ticketr=row.ticketR;
+	var totalr=row.totalR;
+    $('table').append('<tr id="del'+id+'"><th class="no"></th><th class="unit">'+dater+'</th><th class="qty">'+ticketr+'</th><th class="unit">'+pricer+' DH</th><th class="desc">'+typer+'</th><th class="total">'+totalr+' DH</th></tr>');     
+}
+}
+		},function(transaction,err){
+			alert('assurez que vous avez reservé un ticket !');
+		})
+	});
+    db.transaction(function(transaction){
+		var sql1=`SELECT SUM(totalR) AS Prix_T FROM Reservation WHERE cin='${dd}'`;
+		transaction.executeSql(sql1,undefined,function(transaction,result){
+if(result.rows.length){
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+	var Prix_T=row.Prix_T;
+    if(Prix_T.value == "")
+    {
+        Prix_T.innerHTML = "";
+    }
+    $('table').append('<tfoot><tr id="foot"><th class="no">Total</th><th class="unit">-</th><th class="qty">-</th><th class="unit">-</th><th class="desc">-</th><th class="total">'+Prix_T+' DH</th></tr></tfoot>');     
+}
+}
+		});
+	})
+
+   document.getElementById("to").innerText= localStorage.getItem("emaiil");
+
+
+
+
+   db.transaction(function(transaction){
+		var sql2=`SELECT DISTINCT dateR FROM Reservation WHERE cin='${dd}'`;
+		transaction.executeSql(sql2,undefined,function(transaction,result){
+if(result.rows.length){
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+	var dateR=row.dateR;
+    $('#date').append('<span style="color:#37ADB9;">'+dateR+'</span><hr>');     
+}
+}
+		});
+	})
+}
+
+
+function generatepdf()
+{
+
+  
+  
+      html2canvas(document.getElementById("form"), {
+          onrendered: function(canvas) {
+
+              var imgData = canvas.toDataURL('image/png');
+              console.log('Report Image URL: '+imgData);
+              var doc = new jsPDF('l', 'mm', [215, 210]);
+              
+              doc.addImage(imgData, 'PNG', 0.1, 0.1);
+              doc.save('Facture.pdf');
+          }
+      });
+}
+  </script>
+  <script type="text/javascript">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 100,
+	height : 100
+});
+function makeCode () {		
+	qrcode.makeCode("www.FanArtiste.org/MyReservations");
+}
+makeCode();
+</script>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Reserve</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="../image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="../css/pogo-slider.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../css/Signup.css" />
+    <link rel="stylesheet" href="../css/resrvacard.css" />
+    <!-- Reservation css -->
+    <link rel="stylesheet" href="../css/formReservation.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    
+</head>
+<body  class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="5" onload="load();">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="../images/loader.gif" style="width: 75px;" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="image" style="width: 145px;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li>
+                        <li><a class="nav-link" style="padding-top: 35px;" href="home.html">acceuil</a></li>
+                        <li><a class="nav-link" style="padding-top: 35px;" href="../event/Events.html">Evenements</a></li>
+                        <li><a class="nav-link" style="padding-top: 35px;" href="Reservation.html" class="btn btn-primary">Mes Reservation</a></li>
+                    </li>
+                        <li >
+                            <div class="card1 p-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="image"> <img src="../images/profile1.png" style="width: 50px;"> </div>
+                                    <div class="ml-3 w-100" style="margin-left: 20px;" id="profile">
+                                                                  <!--
+
+<h4 class="mb-0 mt-0" style="color: rgb(131, 118, 47);" id="name"></h4> <h6 style="color: rgba(44, 208, 236, 0.76);" id="pos"></h6><h6 style="display:none;" id="cin"></h6><a href="Login.html"><img src="images/exit.png" alt=""></a>
+TODO: append with websql                           
+-->
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <form action="" method="POST" id="form">
+	<section class="ftco-section" id="table">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">My Reservations</h2>
+				</div>
+			</div>
+			<button class="btn btn-danger" type="submit" style="margin-bottom: 20px;" id="supr">supprimer l'historique</button>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table" id="table">
+						  <thead class="thead-dark">
+						    <tr>
+						      <th>Date</th>
+						      <th>Tickets</th>
+						      <th>Prix</th>
+						      <th>Type</th>
+						      <th>Total</th>
+						      <th>&nbsp;</th>
+						    </tr>
+						  </thead>
+                          
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    </form>
+    <!-- Start Footer -->
+    <footer class="footer-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 margin-bottom_30">
+				   <img src="../img/f_logo.png" alt="#" />
+				</div>
+               <div class="col-xl-6 white_fonts">
+                    <div class="row">
+					<div class="col-md-12 white_fonts margin-bottom_30">
+					   <h3>Contact Us</h3>
+					</div>
+                        <div class="col-md-4">
+                            <div class="full icon">
+                                <img src="../images/social1.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>OUJDA
+                                    <br>MOROCCO</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="full icon">
+                                <img src="../images/social2.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>consultation@gmail.com
+                                    <br>consultation@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="full icon">
+                                <img src="../images/social3.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>+2126060606
+                                    <br>+2126060606</p>
+                            </div>
+                        </div>
+						<div class="col-md-12">
+						   <ul class="full social_icon margin-top_20">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+						</div>
+                    </div>
+                </div>
+				
+				 <div class="col-xl-6 white_fonts">
+				    <div class="row">
+					   <div class="col-md-6">
+					     <div class="footer_blog footer_menu">
+						    <h3>Menus</h3>
+						    <ul> 
+							  <li><a href="../FanArtiste/home.html">Home</a></li>
+							  <li><a href="#">About Us</a></li>
+							  <li><a href="Reservation.html">Reservation</a></li>
+							  <li><a href="../event/Events.html">events</a></li>
+							  <li><a href="#">Contact us</a></li>
+							</ul>
+						 </div>
+						 <div class="footer_blog recent_post_footer">
+						   <h3>Recent Post</h3>
+						   <p>date</p>
+						 </div>
+					   </div>
+					   <div class="col-md-6">
+					     
+					   </div>
+					</div>
+				 </div>
+
+            </div>
+            
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp"></p>
+                    <ul class="bottom_menu">
+                        <li><a href="#">Term of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.pogo-slider.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script>
+
+      
+
+/*-------------------------load reservation------------------*/
+var dd  = localStorage.getItem("cin");
+console.log(dd);
+        function load()
+{
+    var db=openDatabase("ReservationDB","1.0","ReservationDB",65535);
+    		$("#table").children();
+	db.transaction(function(transaction){
+		var sql=`SELECT * FROM Reservation WHERE cin='${dd}'`;
+		transaction.executeSql(sql,undefined,function(transaction,result){
+if(result.rows.length){
+
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+    var id = row.id;
+	var dater=row.dateR;
+	var typer=row.priceR;
+	var pricer=row.typeR;
+	var ticketr=row.ticketR;
+	var totalr=row.totalR;
+    $('table').append('<tr id="del'+id+'"><th>'+dater+'</th><th>'+ticketr+'</th><th>'+pricer+' DH</th><th>'+typer+'</th><th>'+totalr+' DH</th><th></th></tr>');     
+}
+}
+		},function(transaction,err){
+			alert('assurez que vous avez reservé un ticket !');
+		})
+	});
+    db.transaction(function(transaction){
+		var sql1=`SELECT SUM(totalR) AS Prix_T FROM Reservation WHERE cin='${dd}'`;
+		transaction.executeSql(sql1,undefined,function(transaction,result){
+if(result.rows.length){
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+	var Prix_T=row.Prix_T;
+    if(Prix_T.value == "")
+    {
+        Prix_T.innerHTML = "";
+    }
+    $('table').append('<tfoot><tr id="foot"><th>Total</th><th>-</th><th>-</th><th>-</th><th>'+Prix_T+' DH</th><th><a id="pdf" href="pdf.html"><img src="../img/pdf.png"></a></th></tr></tfoot>');     
+}
+}
+		});
+	})
+    
+}
+
+
+
+
+
+var db=openDatabase("ReservationDB","1.0","ReservationDB",65535);
+        $("#supr").click(function(){
+if(!confirm("voulez vous supprimer l'historique ?","confirmation")) return;
+db.transaction(function(transaction){
+	var sql=`DELETE FROM Reservation WHERE cin='${dd}'`;
+	transaction.executeSql(sql,undefined,function(){
+		alert("retourner à les événement pour en reserver des billets");
+        document.getElementById("form").action = "../FanArtiste/home.html";
+	},function(transaction,err){
+		alert(err.message);
+	})
+});
+});
+
+/*------------------------profile load--------------------*/
+
+    var emaiil = localStorage.getItem("emaiil");
+	db.transaction(function(transaction){
+		var sql=`SELECT cin,nom,position FROM User WHERE email='${emaiil}'`;
+		transaction.executeSql(sql,undefined,function(transaction,result){
+if(result.rows.length){
+
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+    var cIn = row.cin;
+    var nom = row.nom;
+	var position=row.position;
+    $('#profile').append('<h6 id="cin">'+cIn+'</h6><h4 class="mb-0 mt-0" style="color: rgb(131, 118, 47);" id="name">'+nom+'</h4> <h6 style="color: rgba(44, 208, 236, 0.76);" id="pos">'+position+'</h6><a href="Login.html"><img src="../images/exit.png" alt=""></a>');     
+}
+}
+		},function(transaction,err){
+			alert(err.message);
+		})
+	});
+
+
+</script>
+</body>
+</html>

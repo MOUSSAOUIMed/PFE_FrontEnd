@@ -1,0 +1,168 @@
+../<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rebours</title>
+</head>
+<link rel="stylesheet" href="../css/countdown.css">
+<body>
+  <form  id="form" method="POST">
+  <div class="wrapper" style="margin-top: 100 px;">
+    <div id="setup" class="card">
+      
+      <div class="button-group" style="margin-top: 30px;">
+        
+      <button type="button" class="button-start" id="go" onclick="createE();">Creeer Event</button>
+        <button type="button" class="button-cancel" id="cancel" onclick="deleteE();">Suprimmer l'Evenement</button>
+        <button type="submit" class="button-cancel" onclick="CancelClick()">Annuler</button>
+      </div>
+      
+      <h2>Information</h2>
+      <div class="fields">
+      <div class="input-group">
+        <label>Nom Event</label>
+        <input type="text" class='text-input' name="event-name" autofocus id="NomEV" />
+      </div>
+      <div class="input-group">
+        <label>Message</label>
+        <input type="text" name="event-complete-msg"/>
+      </div>
+      <div class="input-group">
+        <label>Organizeur</label>
+        <input type="text" name="event-organizer" id="artiste" />
+      </div>
+      </div>
+      <h2>Event Date/Temps</h2>
+      <div class="fields">
+      <div class="input-group">
+        <label>Jour</label>
+        <select name="day" id="day">
+      </select>
+      </div>
+      <div class="input-group">
+        <label>Mois</label>
+        <select name="month" id="month">
+      </select>
+      </div>
+      <div class="input-group">
+        <label>Année</label>
+        <select name="year" id="year">
+      </select>
+      </div>
+      <div class="input-group">
+        <label>Temps (Heure)</label>
+        <select name="hour" id="hour">
+      </select>
+      </div>
+      <div class="input-group">
+        <label>Temps (Minute)</label>
+        <select name="minute" id="minute">
+      </select>
+      </div>
+      <div class="input-group">
+        <label>Time (Seconds)</label>
+        <select name="second" id="second">
+      </select>
+      </div>
+      </div>
+    </div>
+    <div id="countdown" class="card hidden">
+      <div class="header">
+      <h1>Countdown</h1>
+      <div class="button-group">
+      <button type="button" class="button-cancel" id="clear">retour</button>
+      <button type="submit" class="button-start" onclick="AddToEvent()">Acceuil</button>
+      </div>
+      </div>
+      <div class="countdown-wrapper">
+      <div class="clock-wrapper">
+        <div id="clock">Patientez...</div>
+      </div>
+      <div class="event-details">
+        <div id="event-complete-display" class="hidden"></div>
+        <div class="event-in-progress" id="event-in-progress">
+        <div id="event-name-display"></div>
+        <div id="event-organizer-display"></div>
+        </div>
+      </div>
+      <small>Event Date: <span id="end-date"></span></small>
+      </div>
+    </div>
+    </div>
+  </form>
+    <link rel="stylesheet" href="../css/countdown.css">
+    <script src="../js/countdown.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/DATA.js"></script>
+    <script>
+           var db=openDatabase("ReservationDB","1.0","ReservationDB",65535);
+           create();
+
+function AddToEvent()
+{
+     
+
+  document.getElementById("form").action = "Admin.html";
+    
+}
+
+
+function CancelClick()
+{
+document.getElementById("form").action = "Admin.html";
+}
+
+function createE()
+{
+     //get date like 1/1/2021 00:00:00
+var day = document.getElementById("day").value;
+var month = document.getElementById("month").value;
+var year = document.getElementById("year").value;
+var hour = document.getElementById("hour").value;
+var minute = document.getElementById("minute").value;
+var second = document.getElementById("second").value;
+var  formatime = month+"/"+day+"/"+year+" "+" "+hour+":"+minute+":"+second;
+//date created
+var dateE = formatime;
+      var NomE = $("#NomEV").val();
+      var  artiste = $("#artiste").val();
+      if(NomE == "")
+      {
+        NomE.focus();
+      }
+      if(artiste == "")
+      {
+        alert("remplir le champ vide");
+      }
+
+  db.transaction(function(transaction){
+    var sql1="INSERT INTO DateEvent(event,Nom,artiste) VALUES(?,?,?)";
+    transaction.executeSql(sql1,[dateE,NomE,artiste],function(){
+        confirm("donnée Events sont bien Ajoutées");
+    },function(transaction,err){
+        alert("déja une event a ete ajouté");
+        
+    })
+    })
+}
+
+
+function deleteE()
+{
+  if(!confirm("voulez vous supprimer l'historique ?","confirmation")) return;
+db.transaction(function(transaction){
+	var sql=`DELETE FROM DateEvent`;
+	transaction.executeSql(sql,undefined,function(){
+		alert("données supprimeé");
+    window.location = 'countdown.html';
+	},function(transaction,err){
+		alert(err.message);
+	})
+});
+}
+
+       </script>
+</body>
+</html>
