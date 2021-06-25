@@ -24,13 +24,13 @@ for folder struct:
 
 --folder php which we have form-process.php from https://www.geeksforgeeks.org/php-form-processing/ which triggers our customer that he forgot an empty text when the event submit is clicked.
 
---folder js which we have all bootstrap library used for our website.
+--folder js which we have all bootstrap library used for webapp.
 
 --folder images and img for optimising our folder.
 
 --folder css for styling our website.
 
-captures.
+--captures.
 
-see capture folder.
+--see capture folder.
 
