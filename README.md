@@ -1,6 +1,6 @@
 FanArtiste AppWeb.
 
-FanArtiste is a WebApp maked by Moussaoui Mohammed,Tailani Rabab,Elmehdi Aymane,Maida Bilal and Bendada Mohammed Amine,wich you reseve An event ticket less than 3 min.
+FanArtiste is a WebApp maked by MOUSSAOUI MOHAMMED,TAILANI RABAB,ELMEHDI Aymane,MAIDA BILAL and BENDADA MOHAMMED AMINE,wich you reseve An event ticket less than 3 min.
 
 for the project we worked with :
 
