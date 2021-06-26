@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Events</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    
+    
+  </head>
+  <body>
+  	<form method="POST" id="form">
+    <div class="loader">
+       <div>
+        <img src="images/icons/preloader.gif" />
+       </div>
+    </div>
+    
+    <div class="container-fluid">
+		<div class="row">
+        	<div class="col-sm-5 left-wrapper">
+            	<div class="event-banner-wrapper">
+                	<div class="logo">
+                        <h1>Stage</h1>
+                    </div>
+                    <div style="text-align: center; font-size: 5vw;">
+                        <h2>
+                            Event De: <span id="artiste"></span>
+                            <br>
+                        <span id="dateE"></span>
+                        <span>preparez-Vous pour une bonne fete</span>
+                        </h2>
+                    </div>
+                	
+                    
+                </div>
+            </div>
+            <div class="col-sm-7 right-wrapper">
+            	<div class="event-ticket-wrapper">
+                    
+                    <div class="event-tab">
+                
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#buyTicket" aria-controls="buyTicket" role="tab" data-toggle="tab">Tickets</a></li>
+                    <li role="presentation"><a href="#venue" aria-controls="venue" role="tab" data-toggle="tab">Place</a></li>
+                   
+                    
+                    <li role="presentation"><a href="#termCondition" aria-controls="termCondition" role="tab" data-toggle="tab">Terms & Conditions</a></li>
+                  </ul>
+                
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="buyTicket" style="overflow-block: scroll;"> 
+                    	<div class="row">
+                        	<div class="col-md-6">
+                            	<div class="ticketBox" data-ticket-price="50">
+                                	<div class="inactiveStatus"></div>
+                                    
+                                    <div class="row">
+ 			                       	<div class="col-xs-6">
+            							<div class="ticket-name">
+                                        	prendre <br>
+                                            Selfie
+                                            
+                                        </div>
+            						</div>
+                                    
+                                    <div class="col-xs-6">
+            							<div class="ticket-price-count-box">
+                                            <div class="ticket-control">
+                                                <div class="input-group">
+                                                  <input type="text" name="quant[1]" class="form-control input-number" value="0" min="0" max="10">
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                                          <span class="glyphicon glyphicon-plus"></span>
+                                                      </button>
+                                                  </span>
+                                                </div>
+                                            </div>
+                                            <p class="price">50DH</p>
+                                        </div>
+            						</div>
+                                    </div>
+                                	
+                                    
+                                    <div class="ticket-description">
+                                    	<p><strong>Please refer Venue Plan:</strong><br>Quand Le concert est finis vous pouvez prendre un selfie avec aucun dérangement et collision avec d'autre fans !</p>
+                                    </div>
+                                            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            	<div class="ticketBox" data-ticket-price="150">
+                                	<div class="inactiveStatus"></div>
+                                    
+                                    <div class="row">
+ 			                       	<div class="col-xs-6">
+            							<div class="ticket-name">solution interactive</div>
+            						</div>
+                                    
+                                    <div class="col-xs-6">
+            							<div class="ticket-price-count-box">
+                                            <div class="ticket-control">
+                                                <div class="input-group">
+                                                 
+                                                  <input type="text" name="quant[2]" class="form-control input-number" value="0" min="0" max="10">
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+                                                          <span class="glyphicon glyphicon-plus"></span>
+                                                      </button>
+                                                  </span>
+                                                </div>
+                                                
+                                            </div>
+                                            <p class="price">150DH</p>
+                                        </div>
+            						</div>
+                                    </div>
+                                	
+                                    
+                                    <div class="ticket-description">
+                                    	<p><strong>Please refer Venue Plan:</strong><br>Vous avez une remarque ou un commentaire cibles à votre Artiste Posez le ici. c'est toi qui améliore votre artiste pour develloper son carriere Client !<br> 
+                                        </p>
+                                    </div>
+                                            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            	<div class="ticketBox" data-ticket-price="250">
+                                	<div class="inactiveStatus"></div>
+                                    
+                                    <div class="row">
+ 			                       	<div class="col-xs-6">
+            							<div class="ticket-name">Semi <br> formation </div>
+            						</div>
+                                    
+                                    <div class="col-xs-6">
+            							<div class="ticket-price-count-box">
+                                            <div class="ticket-control">
+                                                <div class="input-group">
+                                                  
+                                                  <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                                                          <span class="glyphicon glyphicon-plus"></span>
+                                                      </button>
+                                                  </span>
+                                                </div>
+                                                
+                                            </div>
+                                            <p class="price">250DH</p>
+                                        </div>
+            						</div>
+                                    </div>
+                                	
+                                    
+                                    <div class="ticket-description">
+                                    	<p><strong>Please refer Venue Plan:</strong><br>Tu decide à etre un artiste aussi . Bienvenu cher Client ! nous donnons quelques visions et buts pour bien ce demarer dans ce domaine.
+                                        </div>
+                                            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            	<div class="ticketBox" data-ticket-price="350">
+                                	<div class="inactiveStatus"></div>
+                                    
+                                    <div class="row">
+ 			                       	<div class="col-xs-6">
+            							<div class="ticket-name">Complete Formation</div>
+            						</div>
+                                    
+                                    <div class="col-xs-6">
+            							<div class="ticket-price-count-box">
+                                            <div class="ticket-control">
+                                                <div class="input-group">
+                                                  
+                                                  <input type="text" name="quant[4]" class="form-control input-number" value="0" min="0" max="10">
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[4]">
+                                                          <span class="glyphicon glyphicon-plus"></span>
+                                                      </button>
+                                                  </span>
+                                                </div>
+                                                
+                                            </div>
+                                            <p class="price">350DH</p>
+                                        </div>
+            						</div>
+                                    </div>
+                                	
+                                    
+                                    <div class="ticket-description">
+                                    	<p><strong>Please refer Venue Plan:</strong><br>Tu decide à etre un artiste aussi . Bienvenu cher Client ! nous donnons des bonnes trucs pour booster ton carrier avec un livre complétement aidable pour ton carriere !</p>
+                                    </div>
+                                            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            	<div class="ticketBox" data-ticket-price="400">
+                                	<div class="inactiveStatus"></div>
+                                    
+                                    <div class="row">
+ 			                       	<div class="col-xs-6">
+            							<div class="ticket-name">Interview</div>
+            						</div>
+                                    
+                                    <div class="col-xs-6">
+            							<div class="ticket-price-count-box">
+                                            <div class="ticket-control">
+                                                <div class="input-group">
+                                                  
+                                                  <input type="text" name="quant[5]" class="form-control input-number" value="0" min="0" max="10">
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[5]">
+                                                          <span class="glyphicon glyphicon-plus"></span>
+                                                      </button>
+                                                  </span>
+                                                </div>
+                                                
+                                            </div>
+                                            <p class="price">400DH</p>
+                                        </div>
+            						</div>
+                                    </div>
+                                	
+                                    
+                                    <div class="ticket-description">
+                                    	<p><strong>Please refer Venue Plan:</strong><br>L'Interview chers client ça se fait aussi aprés l'évenement avec d'autre fans tout est bien organiser avec tes questions. <br> prepare tes propres questions Client!</p>
+                                    </div>
+                                            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            	<div class="ticketBox" data-ticket-price="500">
+                                	<div class="inactiveStatus"></div>
+                                    
+                                    <div class="row">
+ 			                       	<div class="col-xs-6">
+            							<div class="ticket-name">VIP</div>
+            						</div>
+                                    
+                                    <div class="col-xs-6">
+            							<div class="ticket-price-count-box">
+                                            <div class="ticket-control">
+                                                <div class="input-group">
+                                                  
+                                                  <input type="text" name="quant[6]" class="form-control input-number" value="0" min="0" max="10">
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[6]">
+                                                          <span class="glyphicon glyphicon-plus"></span>
+                                                      </button>
+                                                  </span>
+                                                </div>
+                                                
+                                            </div>
+                                            <p class="price">500dh</p>
+                                        </div>
+            						</div>
+                                    </div>
+                                	
+                                    
+                                    <div class="ticket-description">
+                                    	<p><strong>Please refer Venue Plan:</strong><br> Durant Le concert tu peux particioer avec ton artiste et tu vas t'asseoir aupres de votre artiste avec un dinner et pourquoi pas manger le dinner avec ton artiste! .</p>
+                                    </div>
+                                            
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="venue">
+                    	<h4><br> Stade Municipale Oujda <br> <br> tele (212)06060606</h4><br>
+                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UMEBYRnM0KZhrhqikVv3YigwUd0&ll=34.68704351190157%2C-1.90459709648366&z=16" width="640" height="300"></iframe>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="termCondition">
+                        <div style="overflow:scroll;">
+                            
+                            <p>
+                                Le client doit envoyer le code "1H" au numéro de commande 93900. Il reçoit un SMS faisant office de
+    titre de transport. Les majuscules et minuscules n’ont pas d’influence sur la validité du titre.
+    Si le client ne reçoit pas de SMS de la part du numéro de commande lui confirmant qu’il a bien acheté
+    un titre de transport ou s’il reçoit un message d’erreur lui indiquant que l’achat n’a pu être effectué, cela
+    signifie que le contrat de transport n’a pas été conclu (ou que l’achat n’a pas abouti). Le coût du titre ne
+    sera alors pas facturé au client. Pour pouvoir voyager en règle, le client devra recommencer l’acte
+    d’achat ou se procurer un titre de transport physique.
+    Le titre SMS constitue un contrat entre le client et le réseau de transport. Il est personnalisé et
+    nominatif car il ne peut être utilisé que par le propriétaire du téléphone mobile. 
+    Le client ne peut acheter qu’un seul titre de transport par SMS envoyé. S’il souhaite acheter plusieurs
+    titres, il doit renouveler l’opération de commande autant de fois qu’il souhaite recevoir de titres.
+    Les titres SMS achetés pour plusieurs clients avec un même portable supposent que ces derniers
+    soient ensemble tout au long de leur voyage.
+    Le client doit acheter son titre de transport avant de monter dans un des véhicules du réseau de
+    transports du Pays Voironnais Le titre de transport acheté après le début de l’opération de contrôle par
+    les agents assermentés n’est pas valable. 
+                            </p>
+                        </div>
+           			</div>
+                  </div>
+                
+                </div>
+                
+                	<div class="cart">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p> 
+                        	<span class="ticket-count">0</span> Tickets <span class="divider"></span> Total: DH. <span class="total-amount">0</span></p>
+                    </div>
+                    <div class="col-xs-6">
+                    	<div class="text-right">
+                        	<a class="btn disabled"  data-toggle="modal" data-target="#ticket-details">Ajouter</a>
+                            <br>
+                            <br>
+                        	<a  href="Events.html" id="cancel">Annuler</a>
+                            <br>
+                            <br>
+                        	<a  href="../templates/home.html" id="cancel">Acceuil</a>
+                            
+                            </div>
+                        
+                            </div>
+                         </div>
+                    </div>
+                       
+                </div>
+            </div>
+        </div>
+     </div>
+
+        <!-- Modal Proceed-->
+        <div class="modal right fade" id="ticket-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        	<img src="images/icons/cancel.png">
+        </button>
+        <h4 class="modal-title">Your Tickets</h4>
+      </div>
+      <div class="container mt-5 d-flex justify-content-center">
+        <div class="card1 p-3">
+            <div class="d-flex align-items-center">
+                
+                <div class="image"> <img src="images/profil.jpg" style="width: 150px;"> </div>
+                <div class="ml-3 w-100" style="margin-left: 20px;" id="profile">
+                                                                                      <!--
+
+    <h4 class="mb-0 mt-0" style="color: rgb(131, 118, 47);" id="name"></h4> <h6 style="color: rgba(44, 208, 236, 0.76);" id="pos"></h6><h6 style="display:none;" id="cin"></h6><a href="Login.html"><img src="images/exit.png" alt=""></a>
+        TODO: append with websql                           
+    -->
+                </div>
+            
+            </div>
+        </div>
+    </div>
+      <div class="modal-body">
+        <div class="cart-information">
+            
+            	<div class="ticket-type" id="type"></div>
+          		<ul>
+	                
+	                <li>Tickets: <span class="ticket-count" id="ticket"></span></li>
+                    <li>Price: <span class="ticket-amount" id="price"></span></li>
+                    <hr>
+                    <li>Total: <span class="total-amount" id="total"></span></li>
+                    <br>
+                    <li id="dateE"></li>
+    			</ul>
+                </div>
+                
+                </div>
+        		  <a type="submit" data-toggle="modal" data-target="#Credit-Card"  class="btn">suivant
+                  </a>
+                  <!--onclick="confirm();"-->
+                
+            </div>
+        
+      </div>
+        </div>
+        </div>
+        </div>
+        <!--end modal Proceed-->
+
+        <!--#######################################################################################-->
+        <!-- Modal Credit-card-->
+        <div class="modal right fade" id="Credit-Card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+           <div class="modal-content" style="background-color: rgb(248, 248, 248);">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <img src="images/icons/cancel.png">
+               </button>
+               <h4 class="modal-title">Payement</h4>
+             </div>
+             <div class="modal-body">
+               <div class="cart-information">
+                   
+                <div class="card">
+                    <form>
+                      <h1 class="card__title">Enter Payment Information</h1>
+                      <div class="card__row">
+                        <div class="card__col">
+                          <label for="cardNumber" class="card__label">Card Number</label
+                          ><input
+                            type="text"
+                            class="card__input card__input--large"
+                            id="cardNumber"
+                            placeholder="xxxx-xxxx-xxxx-xxxx"
+                            style="width: 100%;"
+                          />
+                        </div>
+                        <div class="card__col card__chip" style="width:30%; margin-bottom:-75px;">
+                          <img src="images/chip.svg" alt="chip" />
+                        </div>
+                      </div>
+                      <div class="card__row">
+                        <div class="card__col">
+                          <label for="cardExpiry" class="card__label">Expiry Date</label
+                          ><input
+                            type="text"
+                            class="card__input"
+                            id="cardExpiry"
+                            placeholder="xx/xx"
+                            style="width: 75%; margin-right: -50px;"
+                          />
+                        </div>
+                        <div class="card__col" style="margin-bottom: -100px;">
+                          <label for="cardCcv" class="card__label">CCV</label
+                          ><input
+                            type="text"
+                            class="card__input"
+                            id="cardCcv"
+                            placeholder="xxx"
+                            style="width: 100%;"
+                          />
+                        </div>
+                        <div class="card__col card__brand"><i id="cardBrand"></i></div>
+                      </div>
+                    </form>
+                  </div>
+                       
+                       </div>
+                   
+                         <a type="submit" onclick="confirm();" class="btn">Ajouter au panier</a>
+                       
+                   </div>
+               
+             </div>
+               </div>
+               </div>
+               </div>
+               <!--end modal Credit-card-->
+        <!--#######################################################################################-->
+
+     </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+        <script src="js/allscript.js"></script>
+     <script src="../js/jquery.js"></script>
+     <script src="cleave.min.js"></script>
+  </body>
+  <style>
+    .card1 {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff
+}
+
+.stats {
+    background: #f2f5f8 !important;
+    color: #000 !important
+}
+
+.articles {
+    font-size: 10px;
+    color: #a1aab9
+}
+
+.number1 {
+    font-weight: 500
+}
+
+.followers {
+    font-size: 10px;
+    color: #a1aab9
+}
+
+.number2 {
+    font-weight: 500
+}
+
+.rating {
+    font-size: 10px;
+    color: #a1aab9
+}
+
+.number3 {
+    font-weight: 500
+}</style>
+<script src="../js/DATA.js"></script>
+<script>
+
+
+
+    var db=openDatabase("ReservationDB","1.0","ReservationDB",65535);
+function load()
+{
+    create();
+
+}
+    
+    function confirm(){
+        load();
+        store();
+
+    }
+    
+               /*----------------------------------------load profile----------------------------------------------------------------*/
+               var emaiil = localStorage.getItem("emaiil");
+	db.transaction(function(transaction){
+		var sql=`SELECT cin,nom,position FROM User WHERE email='${emaiil}'`;
+		transaction.executeSql(sql,undefined,function(transaction,result){
+if(result.rows.length){
+
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+    var cIn = row.cin;
+    var nom = row.nom;
+	var position=row.position;
+    $('#profile').append('<i style="Color:#F26409" id="cin">'+cIn+'</i><h4 class="mb-0 mt-0" style="color: rgb(131, 118, 47);" id="name">'+nom+'</h4> <h6 style="color: rgba(44, 208, 236, 0.76);" id="pos">'+position+'</h6><a href="Login.html"><img src="../images/exit.png" alt=""></a>');     
+}
+}
+		},function(transaction,err){
+			alert(err.message);
+		})
+	});
+    function back()
+    {
+        history.back();
+    }
+    //======================================================request date Event===========================================
+    db.transaction(function(transaction){
+		var sql=`SELECT event FROM DateEvent WHERE rowid=1`;
+		transaction.executeSql(sql,undefined,function(transaction,result){
+if(result.rows.length){
+
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+    var event = row.event;
+   $('#dateE').append('<div style="text-align:center;"><h2 style="padding-left:175px;">Date:</h2><h4 id="date">'+event+'</h4><hr style="width:300px;"></div>');
+}
+}
+		},function(transaction,err){
+			alert(err.message);
+		})
+	});
+
+  //===================================================request artiste================================================
+  db.transaction(function(transaction){
+		var sql=`SELECT artiste FROM DateEvent WHERE rowid=1`;
+		transaction.executeSql(sql,undefined,function(transaction,result){
+if(result.rows.length){
+
+for(var i=0;i<result.rows.length;i++){
+	var row=result.rows.item(i);
+    var artiste = row.artiste;
+   $('#artiste').append('<div style="text-align:center;"><h4>'+artiste+'</h4><hr style="width:300px;"></div>');     
+
+}
+}
+		},function(transaction,err){
+			alert(err.message);
+		})
+	});
+//#############################################credit card#########################################################
+const cleaveCC = new Cleave("#cardNumber", {
+  creditCard: true,
+  delimiter: "-",
+  onCreditCardTypeChanged: function (type) {
+    const cardBrand = document.getElementById("cardBrand"),
+      visa = "fab fa-cc-visa",
+      mastercard = "fab fa-cc-mastercard",
+      amex = "fab fa-cc-amex",
+      diners = "fab fa-cc-diners-club",
+      jcb = "fab fa-cc-jcb",
+      discover = "fab fa-cc-discover";
+
+    switch (type) {
+      case "visa":
+        cardBrand.setAttribute("class", visa);
+        break;
+      case "mastercard":
+        cardBrand.setAttribute("class", mastercard);
+        break;
+      case "amex":
+        cardBrand.setAttribute("class", amex);
+        break;
+      case "diners":
+        cardBrand.setAttribute("class", diners);
+        break;
+      case "jcb":
+        cardBrand.setAttribute("class", jcb);
+        break;
+      case "discover":
+        cardBrand.setAttribute("class", discover);
+        break;
+      default:
+        cardBrand.setAttribute("class", "");
+        break;
+    }
+  },
+});
+
+const cleaveDate = new Cleave("#cardExpiry", {
+  date: true,
+  datePattern: ["m", "y"],
+});
+
+const cleaveCCV = new Cleave("#cardCcv", {
+  blocks: [3],
+});
+</script>
+</html>
