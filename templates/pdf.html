@@ -358,8 +358,10 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 	width : 100,
 	height : 100
 });
-function makeCode () {		
-	qrcode.makeCode("www.FanArtiste.org/MyReservations");
+function makeCode () {	
+	//si tu deplace le projet vers le telephone il faut respecter le chemin 
+	//pour afficher le chemin tu peux telecharger Zarchiver pour une experience d'organisation des fichier
+	qrcode.makeCode("/storage/emulated/0/FanartisteR/FanArtiste/templates/Reservation.html");
 }
 makeCode();
 </script>
